@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-js/style.css">
+    <title>My Car's Docs</title>
+</head>
+
+<body>
+    <main>
+        <div class="heading">
+            <h1>My Car's Docs</h1>
+        </div>
+        <div class="buttons-main">
+            <div>
+                <button onclick="showVehicleTax()">Данък МПС</button>
+            </div>
+            <div>
+                <button onclick="showTollTax()">Винетка</button>
+            </div>
+            <div>
+                <button onclick="showInsurance()">Застраховка</button>
+            </div>
+            <div>
+                <button onclick="showTechnicalReview()">Преглед</button>
+            </div>
+            <div>
+                <button onclick="showServiceBook()">Сервизна книжка</button>
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------------------------->
+
+        <div class="vehicle-tax-main">
+            <div>
+                <h2>Данък МПС</h2>
+            </div>
+            <div class="add-new">
+                <button id="new-vehicle-tax">Добави</button>
+            </div>
+            <div class="form-new" id="form-new-vehicle-tax">
+                <span class="close-new-form-vehicle-tax">&times;</span>
+                <form onsubmit="return addNewVehicleTax(event)">
+                    <h4>Дата:</h4>
+                    <input type="date" id="vehicle-tax-dateF" required>
+                    <h4>Срок за плащане:</h4>
+                    <input type="date" id="vehicle-tax-dateS" required>
+                    <br>
+                    <button type="submit">Добави</button>
+                </form>
+            </div>
+            <div class="vehicle-taxes-output"></div>
+        </div>
+
+        <!------------------------------------------------------------------------------------->
+
+        <div class="toll-tax-main">
+            <div>
+                <h2>Винетка</h2>
+            </div>
+            <div class="add-new">
+                <button id="new-toll-tax">Добави</button>
+            </div>
+            <div class="form-new" id="form-new-toll-tax">
+                <span class="close-new-form-toll-tax">&times;</span>
+                <form onsubmit="return addNewTolltax(event)">
+                    <h4>Валидна от:</h4>
+                    <input type="date" id="toll-tax-dateF" required>
+                    <h4>Валидна до:</h4>
+                    <input type="date" id="toll-tax-dateS" required>
+                    <br>
+                    <button type="submit">Добави</button>
+                </form>
+            </div>
+            <div class="toll-taxes-output"></div>
+        </div>
+
+        <!------------------------------------------------------------------------------------->
+
+        <div class="insurance-main">
+            <div>
+                <h2>Застраховка</h2>
+            </div>
+            <div class="add-new">
+                <button id="new-insurance">Добави</button>
+            </div>
+            <div class="form-new" id="form-new-insurance">
+                <span class="close-new-form-insurance">&times;</span>
+                <form onsubmit="return addNewInsurance(event)">
+                    <h4>Валидна от:</h4>
+                    <input type="date" id="insurance-dateF" required>
+                    <h4>Валидна до:</h4>
+                    <input type="date" id="insurance-dateS" required>
+                    <br>
+                    <button type="submit">Добави</button>
+                </form>
+            </div>
+            <div class="insurance-output"></div>
+        </div>
+
+        <!------------------------------------------------------------------------------------->
+
+        <div class="technical-review-main">
+            <div>
+                <h2>Преглед</h2>
+            </div>
+            <div class="add-new">
+                <button id="new-technical-review">Добави</button>
+            </div>
+            <div class="form-new" id="form-new-technical-review">
+                <span class="close-new-form-technical-review">&times;</span>
+                <form onsubmit="return addNewTechnicalReview(event)">
+                    <h4>Прегледът е извършен на:</h4>
+                    <input type="date" id="technical-review-dateF" required>
+                    <h4>Подлежи на преглед до:</h4>
+                    <input type="date" id="technical-review-dateS" required>
+                    <br>
+                    <button type="submit">Добави</button>
+                </form>
+            </div>
+            <div class="technical-review-output"></div>
+        </div>
+
+        <!------------------------------------------------------------------------------------->
+
+        <div class="service-book-main">
+            <div>
+                <h2>Сервизна книжка</h2>
+            </div>
+            <div class="add-new">
+                <button id="new-service-book">Добави</button>
+            </div>
+            <div class="form-new" id="form-new-service-book">
+                <span class="close-new-form-service-book">&times;</span>
+                <form onsubmit="return addNewServiceBook(event)">
+                    <h4>Пробег</h4>
+                    <input type="number" id="service-book-km" required>
+                    <h4>Сменен детайл:</h4>
+                    <input type="text" id="service-book-part" required>
+                    <h4>Дата:</h4>
+                    <input type="date" id="service-book-date" required>
+                    <br>
+                    <button type="submit">Добави</button>
+                </form>
+            </div>
+            <div class="service-book-output"></div>
+        </div>
+    </main>
+
+    <div class="modal">
+        <div class="payment">
+            <span class="close-modal">&times;</span>
+            <p>Предстои плащане на <span id="doc-name"></span></p>
+            <p>Платете преди: <span id="doc-date"></span></p>
+        </div>
+    </div>
+
+    <script src="css-js/main.js"></script>
+</body>
+
+</html>

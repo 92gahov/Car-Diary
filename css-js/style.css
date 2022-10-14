@@ -1,0 +1,352 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(241, 238, 238);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.heading {
+    text-align: center;
+    padding: 4px;
+}
+
+.heading h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.buttons-main {
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    margin-top: 18px;
+    width: 60%;
+    margin: 18px auto 0 auto;
+    position: relative;
+}
+
+.buttons-main button {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    padding: 4px 0;
+    background-color: rgb(224, 221, 221);
+    width: 200px;
+    transition: 0.3s;
+}
+
+.buttons-main button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.vehicle-tax-main>div:nth-child(1) {
+    text-align: center;
+}
+
+.vehicle-tax-main h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin: 14px 0 4px 0;
+}
+
+.add-new button {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    padding: 4px 12px;
+    background-color: rgb(224, 221, 221);
+    transition: 0.3s;
+}
+
+.add-new {
+    text-align: center;
+}
+
+.add-new button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.form-new {
+    background-color: rgb(158, 171, 243);
+    width: fit-content;
+    text-align: center;
+    padding: 12px 40px;
+    z-index: 20;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 20;
+    display: none;
+}
+
+.form-new h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 0 4px 0;
+    font-size: 20px;
+}
+
+.form-new input[type=date] {
+    font-size: 14px;
+    border: 2px solid black;
+    padding: 4px;
+    border-radius: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-new input[type=number] {
+    font-size: 14px;
+    padding: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    border-radius: 6px;
+    color: black;
+    width: 120px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.form-new input[type=text] {
+    font-size: 14px;
+    padding: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    border-radius: 6px;
+    color: black;
+    width: 200px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.form-new button {
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    padding: 4px 12px;
+    background-color: rgb(224, 221, 221);
+    transition: 0.3s;
+}
+
+.form-new button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.close-new-form-vehicle-tax {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.close-new-form-vehicle-tax:hover {
+    cursor: pointer;
+    color: red;
+}
+
+/*------------------------------------------*/
+
+.toll-tax-main {
+    display: none;
+}
+
+.toll-tax-main>div:nth-child(1) {
+    text-align: center;
+}
+
+.toll-tax-main h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin: 14px 0 4px 0;
+}
+
+.close-new-form-toll-tax {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.close-new-form-toll-tax:hover {
+    cursor: pointer;
+    color: red;
+}
+
+/*------------------------------------------------*/
+
+.insurance-main {
+    display: none;
+}
+
+.insurance-main>div:nth-child(1) {
+    text-align: center;
+}
+
+.insurance-main h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin: 14px 0 4px 0;
+}
+
+.close-new-form-insurance {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.close-new-form-insurance:hover {
+    cursor: pointer;
+    color: red;
+}
+
+/*-----------------------------------------------------------------*/
+
+.technical-review-main {
+    display: none;
+}
+
+.technical-review-main>div:nth-child(1) {
+    text-align: center;
+}
+
+.technical-review-main h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin: 14px 0 4px 0;
+}
+
+.close-new-form-technical-review {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.close-new-form-technical-review:hover {
+    cursor: pointer;
+    color: red;
+}
+
+/*-------------------------------------------------------------------*/
+
+.service-book-main {
+    display: none;
+}
+
+.service-book-main>div:nth-child(1) {
+    text-align: center;
+}
+
+.service-book-main h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin: 14px 0 4px 0;
+}
+
+.close-new-form-service-book {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.close-new-form-service-book:hover {
+    cursor: pointer;
+    color: red;
+}
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+.docs {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(173, 177, 173);
+    width: fit-content;
+    padding: 0 8px;
+    margin: 20px auto 16px auto;
+    box-shadow: rgba(0, 0, 0, 0.76) 5px 5px 10px;
+}
+
+.div {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.div h3 {
+    margin: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.div h3:nth-child(2) {
+    color: rgb(4, 4, 121);
+}
+
+.div img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.664);
+    text-align: center;
+    display: none;
+}
+
+.payment {
+    background-color: #edfaef;
+    width: 460px;
+    padding: 18px 8px;
+    text-align: center;
+    position: relative;
+    margin: 200px auto;
+    border-radius: 12px;
+}
+
+.payment p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.close-modal {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.close-modal:hover {
+    cursor: pointer;
+    color: red;
+}
